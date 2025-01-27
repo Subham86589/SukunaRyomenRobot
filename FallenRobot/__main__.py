@@ -84,20 +84,20 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
+            text="𝙃𝙄𝙅𝘼𝙆 𝙈𝙀⚡",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="𝐇𝐄𝐋𝐏𝐒 & 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒⚡", callback_data="help_back"),
+        InlineKeyboardButton(text="𝙃𝙀𝙇𝙋𝙎 𝘼𝙉𝘿 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎🎀", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="𝐊𝐍𝐎𝐖 𝐌𝐎𝐑𝐄⚡", callback_data="fallen_"),
-        InlineKeyboardButton(text="𝐒𝐔𝐏𝐏𝐎𝐑𝐓⚡", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="𝙈𝙊𝙍𝙀🌱", callback_data="fallen_"),
+        InlineKeyboardButton(text="𝙐𝙋𝘿𝘼𝙏𝙀𝙎🍁", url=f"https://t.me/sukunaxsupport"),
     ],
     [
-        InlineKeyboardButton(text="𝐌𝐘 𝐌𝐀𝐒𝐓𝐄𝐑⚡", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text="𝐒𝐎𝐔𝐑𝐂𝐄⚡", callback_data="source_"),
+        InlineKeyboardButton(text="𝙊𝙒𝙉𝙀𝙍🎉", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text=""𝙈𝙔 𝙍𝙀𝙋𝙊📢", callback_data="source_"),
     ],
 ]
 
@@ -205,6 +205,9 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
                 "CAACAgUAAx0CfzxeGgABBIDrZ5XgRDF-KcOvLOteSscpVNYQEcYAAhQKAAI_FNlWrOULLTLRpk8eBA"
+            )
+            update.effective_message.reply_photo(
+                "https://files.catbox.moe/a0dqhs.jpg"
             )
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
